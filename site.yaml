@@ -1,8 +1,9 @@
 ---
 # playbook to run free on hosts
 
-- name: run free -h on all hosts
+- name: common and etchosts
   hosts: all
 
   roles:
       - common
+      - etchosts

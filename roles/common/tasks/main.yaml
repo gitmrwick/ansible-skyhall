@@ -4,9 +4,3 @@
 - name: show free memory
   command: "free -h"
 
-- name: update /etc/hosts
-  blockinfile:
-      path: /etc/hosts
-      block: ""
-      marker: "# {mark} ansible managed block written by wick server"
-  become: yes
