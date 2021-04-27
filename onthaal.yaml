@@ -1,0 +1,8 @@
+---
+# playbook to run apt update && list upgradeable on onthaal
+
+- name: common and etchosts
+  hosts: vaccinatie-onthaal
+
+  roles:
+      - aptupdate
