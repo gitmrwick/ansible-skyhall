@@ -1,0 +1,7 @@
+---
+- name: run free -h
+  hosts: all
+
+  tasks:
+      - name: free human readable
+        command: "free -h"
