@@ -1,0 +1,10 @@
+--- 
+# apt update && list --upgradeable
+
+- name: apt update
+  apt:
+    update_cache: yes
+  become: yes
+
+- name: apt list upgradeable
+  command: "apt list --upgradeable"
