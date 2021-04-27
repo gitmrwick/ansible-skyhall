@@ -1,0 +1,30 @@
+---
+# define free -h
+
+- name: show free memory
+  command: "free -h"
+
+- name: update /etc/hosts
+  blockinfile:
+      path: /etc/hosts
+      block: |
+          {{ item.ip }} {{ item.name }}
+      marker: "# {mark} ansible managed block written by wick {{ item.name }}"
+  loop:
+      - { name: ingang, ip: 172.28.105.185 }
+      - { name: vaccinatie-onthaal, ip: 172.28.94.3 }
+      - { name: vaccinatie-kabine-1-2, ip: 172.28.8.167 }
+      - { name: vaccinatie-kabine-3-4, ip: 172.28.52.212 }
+      - { name: vaccinatie-vertrek-wacht, ip: 172.28.205.232 }
+  become: yes
+
+#       - { name: ingang, ip: 192.168.25.158 }
+#       - { name: vaccinatie-kabine-1-2, ip: 192.168.25.153 }
+#       - { name: vaccinatie-kabine-3-4, ip: 192.168.25.135 }
+#       - { name: vaccinatie-vertrek-wacht, ip: 192.168.25.154 }
+
+#       - { name: server, ip: 10.0.1.253 }
+#       - { name: ingang, ip: 10.0.1.7 }
+#       - { name: vaccinatie-kabine-1-2, ip: 10.0.1.9 }
+#       - { name: vaccinatie-kabine-3-4, ip: 10.0.1.10 }
+#       - { name: vaccinatie-vertrek-wacht, ip: 10.0.1.12 }
