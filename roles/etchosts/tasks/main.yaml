@@ -1,0 +1,15 @@
+---
+# maintain /etc/hosts
+# future idea: copy local file
+
+- name: update /etc/hosts
+  blockinfile:
+      path: /etc/hosts
+      block: |
+        172.28.105.185  ingang 
+        172.28.94.3     vaccinatie-onthaal 
+        172.28.8.167    vaccinatie-kabine-1-2
+        172.28.52.212   vaccinatie-kabine-3-4
+        172.28.205.232  vaccinatie-vertrek-wacht
+      marker: "# {mark} ansible managed block written by wick for skyhall"
+  become: yes
