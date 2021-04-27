@@ -1,0 +1,10 @@
+---
+wachtkamer_clients:
+    children:
+        ubuntu:
+            hosts:
+                ingang:
+                vaccinatie-onthaal:
+                vaccinatie-kabine-1-2:
+                vaccinatie-kabine-3-4:
+                vaccinatie-vertrek-wacht:
