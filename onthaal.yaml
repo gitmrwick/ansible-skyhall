@@ -5,4 +5,5 @@
   hosts: vaccinatie-onthaal
 
   roles:
-      - aptupdate
+    # - aptupdate
+      - aptfullupgrade
