@@ -1,0 +1,6 @@
+--- 
+
+- name: apt full upgrade
+  apt:
+    upgrade: full
+  become: yes
